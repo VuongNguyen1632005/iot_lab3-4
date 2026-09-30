@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Lab 4 - Homework 3",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 25,
+      "left": 25,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 80,
+      "left": 250,
+      "attrs": {
+        "temperature": "28.5",
+        "humidity": "65"
+      }
+    }
+  ],
+  "connections": [
+    ["esp:3V3", "dht:VCC", "red", ["h70", "v-35"]],
+    ["esp:GND.1", "dht:GND", "black", ["h80", "v35"]],
+    ["esp:23", "dht:SDA", "green", ["h90"]]
+  ]
+}
